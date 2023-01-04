@@ -12,90 +12,68 @@
         @import url(Reset.css);
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
         body {
-    font-family: 'poppins', sans-serif;
-    min-height: 100vh;
-    width: 100vw;
-    background-image: url("FUNDO.gif");
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-#login{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 150vh;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-.login-card{
-    background-image: url(Borda.gif);
-    padding: 40px;
-    border-radius: 9px;
-    position: relative;
-    width: 280px;
-}
-.login-card-header{
-    padding-bottom: 50px;
-    padding: 9px;
-    border-radius: 5px;
-    opacity: 0.8;
-    color: white;
-}
-.login-card::after{
-    content: "";
-    position: absolute;
-    width: 70px;
-    height: 1px;
-    display: block;
-    inset: 0;
-    transform: rotate(-5px);
-    margin-top: -17px;
-    margin-left: -5px;
-}
-.login-card-label{
-    background: #fbfbfb;
-    font-size: 12px;
-    border-radius: 8px;
-    box-shadow: 1px 2px 8px
-}
-.login-card-header,
-.login-card-footer{
-    text-align: center;
-}
-.login-card-area{
-    display: flex;
-    text-decoration: none;
-    color: #35339a;
-    flex-direction: column;
-    padding: 10px 0;
-}
-.login-card-header{
-    margin-bottom: 2rem;   
-}
-.login-card-header h1{
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: -5rem;
-}
-.login-card-header h1 + div{
-    font-size: calc(1rem * .8);
-    opacity: .8;
-}
-h1 {
-    font-family: Arial;
-    font-size: 30pt;
-    color: blue;
-    text-shadow: 2px 2px 2px orange; 
-} 
-h2{
-    font-family: Arial;
-    font-size: 10pt;
-    color: white;
-    text-shadow: 2px 2px 2px purple;
-}
-
+            font-family: 'poppins', sans-serif;
+            min-height: 100vh;
+            width: 100vw;
+            background-image: url("FUNDO.gif");
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+    }
+    #login{
+        display: flexbox;
+        align-items: center;
+        justify-content: center;
+        height: 150vh;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .login-card{
+        background-image: url(Borda.gif);
+        padding: 40px;
+        border-radius: 9px;
+        position: relative;
+        width: 480px;
+    }
+    .login-card::after{
+        content: "";
+        position: absolute;
+        -webkit-transition:all .2s ease-in-out 0s;
+	    transition:all .2s ease-in-out 0s;
+        width: 70px;
+        height: 1px;
+        display: block;
+        inset: 0;
+        transform: rotate(-5px);
+        margin-top: -17px;
+        margin-left: -5px;
+    }
+    .login-card-label{
+        background: #fbfbfb;
+        font-size: 12px;
+        border-radius: 8px;
+        box-shadow: 1px 2px 8px 
+    }
+    .login-card-area{
+        display: flex;
+        text-decoration: none;
+        color: #35339a;
+        flex-direction: column;
+        padding: 10px 0;
+    }
+    h1 {
+        font-family: Arial;
+        font-size: 30pt;
+        color: blue;
+        text-shadow: 2px 2px 2px orange; 
+    } 
+    h2{
+        font-family: Arial;
+        font-size: 10pt;
+        color: white;
+        text-shadow: 2px 2px 2px purple;
+    }   
     </style>
 </head>
 <body>
@@ -106,23 +84,24 @@ h2{
                 </div>
                 <div class="login-card-header"></div>
                 <h1><font color="#0000FF">Login</font></h1>
-                <div>Digite o seu Login</div>
+                <div><font color="#D2691E"><h3>Digite o seu Login</h3></font></div>
                 <form class="login-card-form">
                     <div class="form item">
                         <spam class="form item-icon material-symbols-rounded"><font color="#fff">Email</font></spam>
-                        <input type="text" id="Digite o seu Login" autocomplete="off">
+                        <input type="from-control" id="Digite o seu Login" name="Email" placeholder="Digite Seu Email"
+                        type="text">
                     </div>
                     <div class="form-item">
                         <spam class="form-item-icon material-symbols-rounded"><font color="#fff">password</font></spam>
-                        <input type="password" id="Enter password" required>
+                        <input type="password" id="Enter password" placeholder="Digite Sua Senha">
                     </div>
                     
                     <div class="form-item-odher">
                         <div class="checkbox">
                             <input type="checkbox" required name="termos_de_consentimento" class="m-0" id="check-terms-and-consents" value="1">>
                             <label for="check-terms-and-consents">
-                                <font color="#fff">Tenho ciência e concordo com o termos do Site</font>
-                                <a target="_blank" href="Politica de Privacidade">Politica de Privacidade</a>
+                                <p style="font-size: 12px;"><font color="#fff">Tenho ciência e concordo com o termos do Site</font>
+                                    <a target="_blank" href="Politica_Privacidade">Politica de Privacidade</a></p>
                             </label>
                             <div class="form-item-odher">
                                 <div class="checkbox">
@@ -132,32 +111,32 @@ h2{
                                 <a href="#">ESQUECI MINHA SENHA</a>
                             </div>
                             <div class="login-card-footer">
-                                Crie Sua Conta <a href="#">Crie Sua Conta</a>.
+                                <a href="#">Crie Sua Conta</a>.
                             </div>
                             <button type="submit">ENTRAR</button>
+                            <form class="Login-form validate-form">
+                                <span class="login-form-title"><h2>Entrar Com</h2></span>
+                                <a href="https://pt-br.facebook.com/">
+                                    <i class="fa fa-facebook-official">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+                                         </svg>
+                                    </i>
+                                </a>
+                                <a href="https://accounts.google.com/v3/signin/identifier?dsh=S125067%3A1669832623682527&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F%26ogbl%2F&emr=1&ltmpl=default&ltmplcache=2&osid=1&passive=true&rm=false&scc=1&service=mail&ss=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin&ifkv=ARgdvAu3w8cV2OTX_XEKfaX6ec8io1OPxSj16cP1Pn2q1fWmIB8eYvKLYkA7s-V3AuEnE6SEGCHcSA" class="btn-google m-b-20">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-google" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <path d="M17.788 5.108a9 9 0 1 0 3.212 6.892h-8"></path>
+                                     </svg>
+                                </a>
+                            </form>
                         </div>
                         <div>
                         </div>
                     </div>
                 </form>
             </div>
-            <form class="Login-form validate-form">
-                <span class="login-form-title"><h2>Entrar Com</h2></span>
-                <a href="https://pt-br.facebook.com/">
-                    <i class="fa fa-facebook-official">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                            <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
-                         </svg>
-                </i>
-                </a>
-                <a href="https://accounts.google.com/v3/signin/identifier?dsh=S125067%3A1669832623682527&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F%26ogbl%2F&emr=1&ltmpl=default&ltmplcache=2&osid=1&passive=true&rm=false&scc=1&service=mail&ss=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin&ifkv=ARgdvAu3w8cV2OTX_XEKfaX6ec8io1OPxSj16cP1Pn2q1fWmIB8eYvKLYkA7s-V3AuEnE6SEGCHcSA" class="btn-google m-b-20">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-google" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M17.788 5.108a9 9 0 1 0 3.212 6.892h-8"></path>
-                     </svg>
-                </a>
-            </form>
             </form>
             </div>
         </div>
