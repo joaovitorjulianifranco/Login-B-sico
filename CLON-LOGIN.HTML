@@ -29,6 +29,14 @@
         height: 150vh;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
+    .input[type=text]{
+        border: 2px solid black;
+        border-radius: 5px;
+        border-left: 10px solid black;;
+        align-items: center;
+        text-align: left;
+        text-align: center;
+    }
     .login-card{
         background-image: url(Borda.gif);
         padding: 40px;
@@ -98,6 +106,10 @@
         text-align: center;
         display: inline-block;
     }
+    a{
+        text-align: center;
+        display: inline-block;
+    }
     /*Efeito ao Clicar no botao(Ir para cadastro ou recuperar senha)*/
     #paracadastro:target ~ .content #cadastro,
     #paraesqueci_a_senha:target ~ .content #esqueci_a_senha,
@@ -146,7 +158,7 @@
                         <div class="checkbox">
                             <input type="checkbox" required name="termos_de_consentimento" class="m-0" id="check-terms-and-consents" value="1">>
                             <label for="check-terms-and-consents">
-                                <p style="font-size: 12px;"><font color="#fff">Tenho ciência e concordo com o termos do Site</font>
+                                <p style="font-size: 12px;">Tenho ciência e concordo com o termos do Site</p>
                                     <a target="_blank" href="Politica_Privacidade">Politica de Privacidade</a></p>
                             </label>
                             <div class="form-item-odher">
