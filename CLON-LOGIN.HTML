@@ -32,58 +32,17 @@
     .login-card{
         background-image: url(Borda.gif);
         padding: 40px;
+        padding-bottom: 50px;
+        padding: 9px;
         border-radius: 9px;
         position: relative;
         width: 480px;
-    }
-    .login-card-header{
-        padding-bottom: 50px;
-        padding: 9px;
-        border-radius: 5px;
-        opacity: 0.8;
-        color: white;
-    }
-    .login-card::after{
-        content: "";
-        position: absolute;
-        -webkit-transition:all .2s ease-in-out 0s;
-	    transition:all .2s ease-in-out 0s;
-        width: 70px;
-        height: 1px;
-        display: block;
-        inset: 0;
-        transform: rotate(-5px);
-        margin-top: -17px;
-        margin-left: -5px;
-    }
-    .login-card-label{
-        background: #fbfbfb;
-        font-size: 12px;
-        border-radius: 8px;
-        box-shadow: 1px 2px 8px 
-    }
-    .login-card-header,
-    .login-card-footer{
-    text-align: center;
-    }
-    .login-card-area{
+        }
+    .login-card .container{
         display: flex;
-        text-decoration: none;
-        color: #35339a;
-        flex-direction: column;
-        padding: 10px 0;
-    }
-    .login-card-header{
-        margin-bottom: 2rem;   
-    }
-    .login-card-header h1{
-        font-size: 2rem;
-        font-weight: 600;
-        margin-bottom: -5rem;
-    }
-    .login-card-header h1 + div{
-        font-size: calc(1rem * .8);
-        opacity: .8;
+        align-items: center;
+        justify-content: center;
+        min-width: 100vh;
     }
     h1 {
         display: flex;
@@ -100,29 +59,44 @@
         color: white;
         text-shadow: 2px 2px 2px purple;
     }
-    h3{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        font-family: Arial;
-        font-size: 20pt;
-        color: orangered;
-        text-shadow: 2px 2px 2px black;
+    .login-card-footer{
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px;
+        box-sizing: border-box;
     }
-    .login-card-form .checkbox{
-        display: flexbox;
-        flex-direction: column;
+    /*Estilo do botao submite*/
+    .form-submit-button{
+        width: 100%!important;
+        background: #1800f2;
+        color: #fff;
+        cursor: grab;
+        border: 1px solid #eee;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px orange;
+        text-shadow: none;
+    }
+    .Esqueci_a_Senha{
+        position: absolute;
+        background: #e1e1e1;
+        left: 0px;
+        height: 20px;
+        width: 440px;
+        padding: 17px 30px 20px 30px;
+        font-size: 16px;
+        text-align: right;
+        border-top: 1px solid #dbe5e8;
+        -webkit-border-radius: 0 0 5px 5px;
+        border-radius: 0 0 5px 5px;
+    }
+    .Criar-Sua-Conta{
         text-align: center;
-        align-items: center;
-        padding-top: var(--space-xs);
-        padding-bottom: var(--space-xs);
-        background: var(--surface1);
-        position: relative;
+        margin-top: 5px;
+        font-display: inline-block;
     }
-    .main{
-        display: grid;
-        gap: var(--space-xl);
-        place-content: center;
+    p{
+        text-align: center;
+        display: inline-block;
     }
     </style>
 </head>
@@ -134,7 +108,6 @@
                 </div>
                 <div class="login-card-header"></div>
                 <h1><font color="#0000FF">Login</font></h1>
-                <div><font color="#D2691E"><h3>Digite o seu Login</h3></font></div>
                 <form class="login-card-form">
                     <div class="form item">
                         <spam class="form item-icon material-symbols-rounded"><font color="#fff">Email</font></spam>
@@ -158,7 +131,7 @@
                                     <input id="check" type="checkbox" class="check" select-check>
                                     <label for="check"><span class="icon"></span><font color="#fff">Mantenha-me conectado</font></label>
                                 </div>
-                                <a href="#">ESQUECI MINHA SENHA</a>
+                                <a href="#">Esqueci a Senha</a>
                             </div>
                             <div class="login-card-footer">
                                 <a href="#">Crie Sua Conta</a>.
