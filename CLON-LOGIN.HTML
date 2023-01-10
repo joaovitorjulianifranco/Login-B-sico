@@ -98,6 +98,29 @@
         text-align: center;
         display: inline-block;
     }
+    /*Efeito ao Clicar no botao(Ir para cadastro ou recuperar senha)*/
+    #paracadastro:target ~ .content #cadastro,
+    #paraesqueci_a_senha:target ~ .content #esqueci_a_senha,
+    #paralogin:target ~ .content #cadalogin #login{
+        z-index: 3;
+        -moz-animation-name: fadeInLeft;
+        animation-name: fadeInLeft;
+        -webkit-animation-delay: .1s;
+        animation-delay: .1s;
+    }
+    /*Efeito ao clicar no botao(Cadastrar)*/
+    #cadastrar:target ~ .content #login,
+    #paralogin:target ~ .content #login{
+        -webkit-animation-name: fadeInLeft;
+        animation-name: fadeInLeft;
+    }
+    /*Efeito ao clicar no botao(Esqueci a  Senha)*/
+    #esqueci_a_senha:target ~ .content #login,
+    #paralogin:target ~ .content #login{
+        -webkit-animation-name: fadeInLeft;
+        animation-name: fadeInLeft;
+    }
+    
     </style>
 </head>
 <body>
@@ -134,7 +157,7 @@
                                 <a href="#">Esqueci a Senha</a>
                             </div>
                             <div class="login-card-footer">
-                                <a href="#">Crie Sua Conta</a>.
+                                <a href="#">Cadastrar</a>
                             </div>
                             <button type="submit">ENTRAR</button>
                             <form class="Login-form validate-form">
