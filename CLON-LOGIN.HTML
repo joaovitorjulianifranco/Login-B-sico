@@ -29,15 +29,12 @@
         height: 150vh;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
-    .input[type=text]{
+    .login-card input[type="text"]{
         border: 2px solid black;
-        border-radius: 10px;
-        border-left: 10px solid black;;
+        outline: none;
+        background-color: white;
         align-items: center;
-        min-height: 300px;
-        margin: 20px;
-        color: #444;
-        padding: 20px;
+
     }
     .login-card{
         background-image: url(Borda.gif);
@@ -104,20 +101,28 @@
         margin-top: 5px;
         font-display: inline-block;
     }
+
     p{
         text-align: center;
         display: inline-block;
         color: white;
         font-size: 12px;
     }
-    a{
+    /*alinhando a div de cadastro*/
+    div .a-Cadastrar,
+    div .a-Esqueci_a_Senha {
         text-align: center;
-        display: inline-block;
-        font-size: 12px;
+        display: inline-flex;
+        color: white;
+        font-size: medium;
+        text-align: left;
     }
     span{
         text-align: center;
         display: inline-block;
+    }
+    .button{
+
     }
     /*Efeito ao Clicar no botao(Ir para cadastro ou recuperar senha)*/
     #paracadastro:target ~ .content #cadastro,
