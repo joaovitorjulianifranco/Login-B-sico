@@ -44,11 +44,19 @@
         justify-content: center;
         min-width: 100vh;
     }
-    .input[type="text"]{
-        border: 2px solid black;
-        outline: none;
-        background-color: white;
-        align-items: center;
+    /*Estilo da borda de texto*/
+    input[type="text"], input[type="password"]{
+        width: 90%;
+        padding: 12px 18px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid black;
+        box-sizing: border-box;
+        
+    }
+    span.psw{
+        float: right;
+        padding-top: 14px;
     }
     h1 {
         display: flex;
@@ -159,7 +167,7 @@
                 <form class="login-card-form">
                     <div class="form item">
                         <spam class="form item-icon material-symbols-rounded"><font color="#fff">Email</font></spam>
-                        <input type="from-control" id="Digite o seu Login" name="Email" placeholder="Digite Seu Email"
+                        <input type="from-control" id="Enter Email" name="Email" placeholder="Digite Seu Email"
                         type="text">
                     </div>
                     <div class="form-item">
