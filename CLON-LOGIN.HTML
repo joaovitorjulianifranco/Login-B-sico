@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,300,0,0" />
     <link rel="stylesheet" href="PASSWORD.CSS">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,300,0,0" />
+
     <style>
         @import url(Reset.css);
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
@@ -29,6 +30,7 @@
         height: 150vh;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
+    /*Estilo da borda*/
     .login-card{
         background-image: url(Borda.gif);
         padding: 40px;
@@ -37,27 +39,32 @@
         border-radius: 9px;
         position: relative;
         width: 480px;
-        }
+    }
     .login-card .container{
-        display: flex;
+        display: inline-block;
         align-items: center;
         justify-content: center;
         min-width: 100vh;
     }
-    /*Estilo da borda de texto*/
-    input[type="text"], input[type="password"]{
+    /*Card de texto do login*/
+    input[type="text"]{
         width: 90%;
         padding: 12px 18px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid black;
+        margin: 8px;
+        display: flex;
+        border: 1px dashed black;
         box-sizing: border-box;
-        
     }
-    span.psw{
+    .span.email{
+        width: 90%;
         float: right;
         padding-top: 14px;
     }
+    .span.psw{
+        float: right;
+        padding-top: 14px;
+    }
+    /*Alinhamento do titulo*/
     h1 {
         display: flex;
         font-family: Arial;
@@ -166,9 +173,11 @@
                 <h1><font color="#0000FF">Login</font></h1>
                 <form class="login-card-form">
                     <div class="form item">
+                        <div class="card-body">
                         <spam class="form item-icon material-symbols-rounded"><font color="#fff">Email</font></spam>
-                        <input type="from-control" id="Enter Email" name="Email" placeholder="Digite Seu Email"
+                        <input type="card-body" id="Digite o seu Login" name="Email" placeholder="Digite Seu Email"
                         type="text">
+                    </div>
                     </div>
                     <div class="form-item">
                         <spam class="form-item-icon material-symbols-rounded"><font color="#fff">password</font></spam>
