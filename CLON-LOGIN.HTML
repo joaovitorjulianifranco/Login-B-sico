@@ -55,15 +55,6 @@
         border: 1px dashed black;
         box-sizing: border-box;
     }
-    .span.email{
-        width: 90%;
-        float: right;
-        padding-top: 14px;
-    }
-    .span.psw{
-        float: right;
-        padding-top: 14px;
-    }
     /*Alinhamento do titulo*/
     h1 {
         display: flex;
@@ -177,13 +168,24 @@
                         <spam class="form item-icon material-symbols-rounded"><font color="#fff">Email</font></spam>
                         <input type="card-body" id="Digite o seu Login" name="Email" placeholder="Digite Seu Email"
                         type="text">
-                    </div>
+                        </div>
                     </div>
                     <div class="form-item">
                         <spam class="form-item-icon material-symbols-rounded"><font color="#fff">password</font></spam>
                         <input type="password" id="Enter password" placeholder="Digite Sua Senha">
+                        <img id="olho" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABDUlEQVQ4jd2SvW3DMBBGbwQVKlyo4BGC4FKFS4+TATKCNxAggkeoSpHSRQbwAB7AA7hQoUKFLH6E2qQQHfgHdpo0yQHX8T3exyPR/ytlQ8kOhgV7FvSx9+xglA3lM3DBgh0LPn/onbJhcQ0bv2SHlgVgQa/suFHVkCg7bm5gzB2OyvjlDFdDcoa19etZMN8Qp7oUDPEM2KFV1ZAQO2zPMBERO7Ra4JQNpRa4K4FDS0R0IdneCbQLb4/zh/c7QdH4NL40tPXrovFpjHQr6PJ6yr5hQV80PiUiIm1OKxZ0LICS8TWvpyyOf2DBQQtcXk8Zi3+JcKfNafVsjZ0WfGgJlZZQxZjdwzX+ykf6u/UF0Fwo5Apfcq8AAAAASUVORK5CYII="/>
                     </div>
-                    
+                    <script>
+                        var input = document.querySelector('#input input');
+                            $("#olho").mousedown(function(){
+                                $("#senha").attr("type", "text");
+                            });
+                            $("olho").,onmouseup(function(){
+                                $("#senha").attr("type", "password")
+                            });
+                            var olho= $("#olho");
+                    </script>
+                </form>
                     <div class="form-item-odher">
                         <div class="checkbox">
                             <input type="checkbox" required name="termos_de_consentimento" class="m-0" id="check-terms-and-consents" value="1">
