@@ -70,12 +70,10 @@
         font-size: 10pt;
         color: white;
         text-shadow: 2px 2px 2px purple;
-    }
-    .login-card-footer{
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px;
-        box-sizing: border-box;
+        text-align: column;
+        display: flexbox;
+        font-size: medium;
+        text-align: center;
     }
     /*Estilo do botao submite*/
     .form-submit-button{
@@ -88,23 +86,22 @@
         box-shadow: 5px 5px 5px orange;
         text-shadow: none;
     }
-    .Esqueci_a_Senha{
-        position: absolute;
-        background: #e1e1e1;
-        left: 0px;
-        height: 20px;
-        width: 440px;
-        padding: 17px 30px 20px 30px;
-        font-size: 16px;
-        text-align: right;
-        border-top: 1px solid #dbe5e8;
-        -webkit-border-radius: 0 0 5px 5px;
-        border-radius: 0 0 5px 5px;
+    .login-card-footer{
+        width: 100%;
+        margin: 5px;
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
     }
-    .Criar-Sua-Conta{
-        text-align: center;
-        margin-top: 5px;
-        font-display: inline-block;
+    .login-card-footer{
+        display: flex;
+        outline-offset: unset;
+        outline-offset: center;
+        line-height: inline-block;
+        float: left;
+        position: relative;
+        margin-top: center;
+        outline-offset: ;
     }
     p{
         text-align: center;
@@ -115,21 +112,10 @@
     .chackmark{
         position: relative;
         display: inline-block;
-        
+        box-sizing: border-box;
     }
     /*alinhando a div de cadastro*/
-    div .a-Cadastrar,
-    div .a-Esqueci_a_Senha {
-        text-align: center;
-        display: inline-flex;
-        color: white;
-        font-size: medium;
-        text-align: left;
-    }
-    span{
-        text-align: center;
-        display: inline-block;
-    }
+   
     /*Efeito ao Clicar no botao(Ir para cadastro ou recuperar senha)*/
     #paracadastro:target ~ .content #cadastro,
     #paraesqueci_a_senha:target ~ .content #esqueci_a_senha,
@@ -152,6 +138,8 @@
         -webkit-animation-name: fadeInLeft;
         animation-name: fadeInLeft;
     }
+    /*Animação botao para mostrar senha*/
+    
     </style>
 </head>
 <body>
@@ -239,4 +227,4 @@
     </div>
 </section>
 </body>
-</html>
+</html
