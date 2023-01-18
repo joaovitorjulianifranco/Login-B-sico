@@ -86,23 +86,6 @@
         box-shadow: 5px 5px 5px orange;
         text-shadow: none;
     }
-    .login-card-footer{
-        width: 100%;
-        margin: 5px;
-        display: inline-block;
-        align-items: center;
-        justify-content: center;
-    }
-    .login-card-footer{
-        display: flex;
-        outline-offset: unset;
-        outline-offset: center;
-        line-height: inline-block;
-        float: left;
-        position: relative;
-        margin-top: center;
-        outline-offset: ;
-    }
     p{
         text-align: center;
         display: inline-block;
@@ -114,8 +97,31 @@
         display: inline-block;
         box-sizing: border-box;
     }
-    /*alinhando a div de cadastro*/
-   
+    /*alinhando a div Recadastramento(Resolvendo)*/
+    .login-card-footer .a{
+       display: flex;
+       align-items: center;
+       text-align: right;
+       outline-offset: center;
+       line-height: inline-block;
+       justify-content: center;
+       position: relative;
+       flex-direction: column;
+    }
+    .login-card-footer i{
+        display: inline;
+        align-items: center;
+        text-align: right;
+        outline-offset: center;
+        line-height: inline-block;
+        justify-content: center;
+        position: relative;
+        flex-direction: center;
+        overflow: auto;
+        margin-right: 4px;
+        margin-left: 50%;
+        flex-direction: row;
+    }
     /*Efeito ao Clicar no botao(Ir para cadastro ou recuperar senha)*/
     #paracadastro:target ~ .content #cadastro,
     #paraesqueci_a_senha:target ~ .content #esqueci_a_senha,
@@ -192,10 +198,10 @@
                                     <input id="check" type="checkbox" class="check" select-check>
                                     <label for="check"><span class="icon"></span><font color="#fff">Mantenha-me conectado</font></label>
                                 </div>
-                                <a href="#">Esqueci a Senha</a>
+                                <a href="#"><i>Esqueci a Senha?</i></a>
                             </div>
                             <div class="login-card-footer">
-                                <a href="#">Cadastrar</a>
+                                <a href="#"><i>Cadastrar</i></a>
                             </div>
                             <button type="submit">ENTRAR</button>
                             <form class="Login-form validate-form">
