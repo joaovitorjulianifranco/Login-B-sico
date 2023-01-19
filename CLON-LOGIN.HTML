@@ -45,6 +45,7 @@
         align-items: center;
         justify-content: center;
         min-width: 100vh;
+        position: relative;
     }
     /*Card de texto do login*/
     input[type="text"]{
@@ -99,28 +100,29 @@
     }
     /*alinhando a div Recadastramento(Resolvendo)*/
     .login-card-footer .a{
-       display: flex;
-       align-items: center;
-       text-align: right;
-       outline-offset: center;
-       line-height: inline-block;
-       justify-content: center;
-       position: relative;
-       flex-direction: column;
-    }
-    .login-card-footer i{
-        display: inline;
+        display: flex;
         align-items: center;
         text-align: right;
         outline-offset: center;
-        line-height: inline-block;
+        line-height: 15%;
         justify-content: center;
-        position: relative;
-        flex-direction: center;
-        overflow: auto;
-        margin-right: 4px;
-        margin-left: 50%;
+        position: fixed;
         flex-direction: row;
+        height: 4em;
+    }
+    .login-card-footer i{
+        display: flex;
+        align-items: center;
+        text-align: right;
+        justify-content: center;
+        justify-items: center;
+        position: static;
+        flex-direction: row;
+        width: 100%;
+        left: 150px;
+        top: 4em;
+        right: 5px;
+        line-height: 15%;
     }
     /*Efeito ao Clicar no botao(Ir para cadastro ou recuperar senha)*/
     #paracadastro:target ~ .content #cadastro,
@@ -144,8 +146,51 @@
         -webkit-animation-name: fadeInLeft;
         animation-name: fadeInLeft;
     }
-    /*Animação botao para mostrar senha*/
-    
+    /*FadeInLeft(animaçao ao interagir)*/
+    @-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+ 
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+ 
+/*fadeOutLeft*/
+@-webkit-keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+  }
+}
+ 
+@keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
     </style>
 </head>
 <body>
