@@ -109,6 +109,10 @@
         left: 14em;
         top: 6cm;
         z-index: auto;
+        display: grid;
+        -ms-grid-column-align: center;
+        grid-template-columns: 60px 60px;
+
     }
     /*Efeito ao Clicar no botao(Ir para cadastro ou recuperar senha)*/
     #paracadastro:target ~ .content #cadastro,
@@ -229,7 +233,7 @@
                                     <input id="check" type="checkbox" class="check" select-check>
                                     <label for="check"><span class="icon"></span><font color="#fff">Mantenha-me conectado</font></label>
                                 </div>
-                                <a href="#">Esqueci a Senha?></a>
+                                <a href="#">Esqueci a Senha?</a>
                             </div>
                             <div class="login-card-footer">
                                 <a href="#">Cadastrar</a>
