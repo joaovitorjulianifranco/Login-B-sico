@@ -99,36 +99,17 @@
         box-sizing: border-box;
     }
     /*alinhando a div Recadastramento(Resolvendo)*/
-    .login-card-footer .a{
-        display: inline-block;
-        align-items: center;
-        text-align: right;
-        outline-offset: center;
-        line-height: 15%;
-        justify-content: center;
-        position: fixed;
-        flex-direction: row;
-        height: 4em;
-        left: 160px;
-        top: 6em;  
-        mask-position: center;
-    }
-    .login-card-footer i{
+    .login-card-footer{
         display: flex;
-        align-items: center;
-        text-align: right;
-        justify-content: center;
-        justify-items: center;
-        position: static;
+        align-items: baseline;
+        width: 20%;
         flex-direction: row;
-        left: 160px;
-        top: 6em;
-        right: 6px;
-        line-height: 16%;
-        mask-position: top;
-        
+        position: absolute;
+        float: left;
+        left: 14em;
+        top: 6cm;
+        z-index: auto;
     }
-
     /*Efeito ao Clicar no botao(Ir para cadastro ou recuperar senha)*/
     #paracadastro:target ~ .content #cadastro,
     #paraesqueci_a_senha:target ~ .content #esqueci_a_senha,
@@ -248,10 +229,10 @@
                                     <input id="check" type="checkbox" class="check" select-check>
                                     <label for="check"><span class="icon"></span><font color="#fff">Mantenha-me conectado</font></label>
                                 </div>
-                                <a href="#"><i>Esqueci a Senha?</i></a>
+                                <a href="#">Esqueci a Senha?></a>
                             </div>
                             <div class="login-card-footer">
-                                <a href="#"><i>Cadastrar</i></a>
+                                <a href="#">Cadastrar</a>
                             </div>
                             <button type="submit">ENTRAR</button>
                             <form class="Login-form validate-form">
