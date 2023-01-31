@@ -94,9 +94,16 @@
         color: white;
         font-size: 12px;
     }
+    /*Ckeckbox*/
     .chackmark{
         position: relative;
         display: inline-block;
+        box-sizing: border-box;
+    }
+    .checkmark:checked{
+        position: relative;
+        outline: 2px solid deeppink;
+        border: none;
         box-sizing: border-box;
     }
     /*alinhamento do botao(resolvendo)*/
@@ -154,18 +161,6 @@
             resize: both;
             right: 5%;
         }
-    }
-    .login-card-footer a{
-        display: flex;
-        font-size: 1.2rem;
-        font-weight: bold;
-        position: absolute;
-        top: 6cm;
-        text-align: center;
-        inset: 1;
-        column-gap: normal;
-        -ms-grid-column-align: center;
-        white-space: nowrap;
     }
     /*Efeito ao Clicar no botao(Ir para cadastro ou recuperar senha)*/
     #paracadastro:target ~ .content #cadastro,
@@ -287,10 +282,10 @@
                                     <input id="check" type="checkbox" class="check" select-check>
                                     <label for="check"><span class="icon"></span><font color="#fff">Mantenha-me conectado</font></label>
                                 </div>
-                                <a href="#">Esqueci a Senha?</a>
+                                <p href="#">Esqueci a Senha?</p>
                             </div>
                             <div class="login-card-footer">
-                                <a href="#">Cadastrar</a>
+                                <p href="#">Cadastrar</p>
                             </div>
                             <button onclick="my_button_click_handler">ENTRAR</button>
                             <form class="Login-form validate-form">
