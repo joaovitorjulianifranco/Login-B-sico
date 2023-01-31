@@ -69,17 +69,13 @@
         text-shadow: 2px 2px 2px orange; 
     } 
     h2{
-        font-family: Arial;
-        font-size: 19pt;
-        color: white;
-        text-shadow: 2px 2px 2px purple;
-        text-align: column;
-        display: block;
-        font-size: medium;
-        padding: 40px;
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 10pc;
+       display: flex;
+       font-size: 19pt;
+       color: white;
+       text-shadow: 2px 2px 2px purple;
+       align-items: center;
+       flex-direction: column;
+       font-size: 20pt;
     }
     /*Estilo do botao submite*/
     .form-submit-button{
@@ -119,7 +115,6 @@
         align-self: center;
         font-size: 12pt;
     }
-    
     /*alinhando a div Recadastramento(Resolvendo)*/
     .login-card-footer a{
         display: flex;
@@ -147,14 +142,30 @@
         padding: 18px;
         align-items: center;
     }
-    .login-card-footer a::first-line{
+    @media(max-width:20%){
+        .my-card:nth-of-type(odd){
+            clear: left;
+            display: flex;
+            text-align: center;
+            left: 14em;
+            top: 6cm;
+            -ms-grid-column-align: center;
+            padding: 18px;
+            resize: both;
+            right: 5%;
+        }
+    }
+    .login-card-footer a{
         display: flex;
-        float: left;
-        left: 14em;
+        font-size: 1.2rem;
+        font-weight: bold;
+        position: absolute;
         top: 6cm;
-        align-items: baseline;
-        width: 20%;
         text-align: center;
+        inset: 1;
+        column-gap: normal;
+        -ms-grid-column-align: center;
+        white-space: nowrap;
     }
     /*Efeito ao Clicar no botao(Ir para cadastro ou recuperar senha)*/
     #paracadastro:target ~ .content #cadastro,
