@@ -122,6 +122,16 @@
         align-self: center;
         font-size: 12pt;
     }
+    input[type=button],
+    button[type=submit]{
+        display: flex;
+        left: 140px;
+        position: absolute;
+        float: left;
+        align-items: center;
+        flex-direction: column;
+        align-items: center;
+    }
     /*alinhando a div Recadastramento(Resolvendo)*/
     .login-card-footer a{
         display: flex;
@@ -140,6 +150,8 @@
         resize: both;
         padding: 18px;
         text-align: center;
+        height: 60px;
+        align-self: center;
     }
     #login-card-footer a{
         display: inline-block;
@@ -147,7 +159,7 @@
         top: 6cm;
         right: auto;
         padding: 18px;
-        align-items: center;
+        align-self: center;
     }
     @media(max-width:20%){
         .my-card:nth-of-type(odd){
@@ -162,6 +174,14 @@
             right: 5%;
         }
     }
+   .login-card-footer a::first-line{
+    display: flex;
+    top: 6px;
+    font-weight: 130px;
+    -ms-grid-column-align: center;
+    inline-size: 20cm;
+    max-inline-size: 10cm;
+   }
     /*Efeito ao Clicar no botao(Ir para cadastro ou recuperar senha)*/
     #paracadastro:target ~ .content #cadastro,
     #paraesqueci_a_senha:target ~ .content #esqueci_a_senha,
@@ -282,10 +302,10 @@
                                     <input id="check" type="checkbox" class="check" select-check>
                                     <label for="check"><span class="icon"></span><font color="#fff">Mantenha-me conectado</font></label>
                                 </div>
-                                <p href="#">Esqueci a Senha?</p>
+                                <a href="#">Esqueci a Senha?</a>
                             </div>
                             <div class="login-card-footer">
-                                <p href="#">Cadastrar</p>
+                                <a href="#">Cadastrar</a>
                             </div>
                             <button onclick="my_button_click_handler">ENTRAR</button>
                             <form class="Login-form validate-form">
