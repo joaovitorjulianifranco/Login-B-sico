@@ -88,6 +88,7 @@
         box-shadow: 5px 5px 5px orange;
         text-shadow: none;
     }
+    /*Descrição do checkbox*/
     p{
         text-align: center;
         display: inline-block;
@@ -120,17 +121,18 @@
         border: 1px solid #eee;
         border-radius: 6px;
         align-self: center;
-        font-size: 12pt;
     }
     input[type=button],
     button[type=submit]{
         display: flex;
-        left: 140px;
-        position: absolute;
+        position: relative;
+        flex-direction: row;
+        text-align: center;
         float: left;
-        align-items: center;
-        flex-direction: column;
-        align-items: center;
+        left: 140px;
+        columns: 100px;
+        column-gap: unset;
+        
     }
     /*alinhando a div Recadastramento(Resolvendo)*/
     .login-card-footer a{
@@ -163,7 +165,7 @@
     }
     @media(max-width:20%){
         .my-card:nth-of-type(odd){
-            clear: left;
+            clear: both;
             display: flex;
             text-align: center;
             left: 14em;
@@ -174,14 +176,29 @@
             right: 5%;
         }
     }
-   .login-card-footer a::first-line{
-    display: flex;
-    top: 6px;
-    font-weight: 130px;
-    -ms-grid-column-align: center;
-    inline-size: 20cm;
-    max-inline-size: 10cm;
-   }
+    .login-card-footer a:target{
+        display: flex;
+        clear: both;
+        top: 6cm;
+        --contain-intrinsic-inline-size: Cadastrar;
+        justify-content: center;
+    }
+    .login-card-footer a{
+        display: flex;
+        --contain-intrinsic-inline-size: Esqueci a Senha?;
+        inset-inline: var(--contain-intrinsic-inline-size);
+        justify-content: center;
+        text-underline-position: underline;
+    }
+    /*.login-card-footer a{
+        display: flex;
+        --contain-intrinsic-inline-size: Esqueci a Senha?;
+        inset-inline: var(--contain-intrinsic-inline-size);
+        justify-content: center;
+        text-underline-position: underline;
+        text-underline-position: under;
+        text-emphasis-position: top;
+    }*/
     /*Efeito ao Clicar no botao(Ir para cadastro ou recuperar senha)*/
     #paracadastro:target ~ .content #cadastro,
     #paraesqueci_a_senha:target ~ .content #esqueci_a_senha,
