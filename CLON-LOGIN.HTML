@@ -182,6 +182,9 @@
         top: 6cm;
         --contain-intrinsic-inline-size: Cadastrar;
         justify-content: center;
+        vertical-align: text-top;
+        text-align: center;
+        vertical-align: top;
     }
     .login-card-footer a{
         display: flex;
@@ -189,16 +192,42 @@
         inset-inline: var(--contain-intrinsic-inline-size);
         justify-content: center;
         text-underline-position: underline;
+        left: 60%;
+        grid-column: 50px;
+        vertical-align: text-top;
+        text-align: center;
+        vertical-align: baseline;
     }
-    /*.login-card-footer a{
+    .login-card-footer a{
         display: flex;
-        --contain-intrinsic-inline-size: Esqueci a Senha?;
-        inset-inline: var(--contain-intrinsic-inline-size);
-        justify-content: center;
+        inline-size: auto;
+        writing-mode: horizontal-tb;
+        grid-template-columns: 60px 60px;
         text-underline-position: underline;
-        text-underline-position: under;
-        text-emphasis-position: top;
-    }*/
+    }
+    .login-card-footer a{
+        display: flex;
+        min-width: 20em;
+        min-height: 10px;
+        min-inline-size: 20px;
+        writing-mode: horizontal-tb;
+        justify-content: center;
+    }
+    .login-card-footer a::content{
+        position: absolute;
+        top: 50%;
+    }
+    .login-card-footer .a{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 50%;
+        margin-top: -25px;
+    }
+    .Sprint-Backlog a{
+        display: flex;
+        
+    } 
     /*Efeito ao Clicar no botao(Ir para cadastro ou recuperar senha)*/
     #paracadastro:target ~ .content #cadastro,
     #paraesqueci_a_senha:target ~ .content #esqueci_a_senha,
