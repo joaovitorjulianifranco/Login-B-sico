@@ -134,6 +134,24 @@
         column-gap: unset;
         
     }
+    .form-submit-button h3{
+        display: flex;
+        right: 10cm;
+        padding: 10px;
+        position: relative;
+        flex-direction: column;
+        text-align: center;
+        column-width: 100px;
+        column-span: all;
+        height: fit-content;
+        column-gap: normal;
+        width: 100%;
+        margin-top: 20px;
+        padding: 10px;
+        height: min-content;
+        overflow: hidden;
+        
+    }
     /*alinhando a div Recadastramento(Resolvendo)*/
     .login-cadastrar a{
         display: flex;
@@ -155,16 +173,11 @@
         height: 60px;
         align-self: center;
     }
-    .login-cadastrar a{
-        display: inline-block;
-        left: 90%;
-        position: relative;
-        align-items: baseline;
-        text-align: center;
-    }
-    .password .login-card-footer a{
+    .login-card-footer a{
         display: flex;
-        left: 90%;
+        align-items: baseline;
+        float: left;
+        left: 14em;
     }
     /*Efeito ao Clicar no botao(Ir para cadastro ou recuperar senha)*/
     #paracadastro:target ~ .content #cadastro,
@@ -288,13 +301,11 @@
                                 </div>
                                 
                             </div>
-                            <div class="Recover-password" id="password">
+                            <div class="login-card-footer">
                                 <a href="#">Esqueci a Senha?</a>
-                            </div>
-                            <div class = "cadastrar" id="login-">
                                 <a href="#">Cadastrar</a>
                             </div>
-                            <button onclick="my_button_click_handler">ENTRAR</button>
+                            <button onclick="my_button_click_handler"><h3>ENTRAR</h3></button>
                             <form class="Login-form validate-form">
                                 <span class="login-form-title"><h2>Entrar Com</h2></span>
                                 <a href="https://pt-br.facebook.com/">
