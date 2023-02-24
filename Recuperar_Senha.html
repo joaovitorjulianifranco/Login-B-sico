@@ -23,13 +23,14 @@
                     <input type="password" id="Digite a sua Senha" placeholder="Digite Sua Senha"
                     type="text" id="card-body">
                 </div>
-                <div class="login-card-form">  
+                <div classname="login-card-form">  
                     <legend>Confirmar Sua Senha</legend>
                     <span class="material-symbols-outlined">password</span>
                     <label for="card-body"></label>
                     <input type="password" id="Digite a sua Senha" placeholder="Confirme Sua Senha"
                     type="text" id="card-body">
                 </div>
+                
             </fieldset>
             </form>
             <!--Validação da senha (Resolvendo)-->
@@ -50,15 +51,26 @@
                     document.getElementById("message").innerHTML="**A senha deve conter pelo menos 15 caracters";
                     return false;
                 } else{
-                    alert("Senha Correta");
+                   alert("Senha Alterada Com Sucesso")
                 }
+                var password = document.getSelection.alerts[0].value;
+                if
             </script>
             <button type="button" onclick="matchPassword()">CONFIRMAR</button>
-            <script>
-                function matchPassword(){
-                    alert('Senha Correta function');
+            <!--<script>
+                function validate_password(matchPassword){
+                    var password = document.getElementById("password-error")
+                    if(password==""){
+                        alert("Senha Errada!");
+                        document.getElementById("message").onkeypress="Sua Senha Esta Errado";
+                        return false;
+                    }
+                    if(password==""){
+                        alert("As senhas não conferem");
+                        document.getElementById("message").onkeypress="**";
+                    }
                 }
-            </script>
+            </script>-->
         </header>
     </div> 
 </body>
