@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Redefinir</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
@@ -34,15 +34,29 @@
             </form>
             <!--Validação da senha (Resolvendo)-->
             <script>
-                var password=passwordForm.value('password');
-                confirm_password = document.getElementById('confirm_password');
-                function validate_password(){
-                    if(passwor.value != confirm_password.value){
-                        validate_password = false;
-                        confirm_password.setCustomValidity('Senhas diferentes');
-                    } else{
-                       
-                    }
+                var passwords=document.getElementById('password').value;
+                confirmarSuaSenha = function validate_password(confirmarSuaSenha){
+                    if(passwords.length( /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/));
+                }
+                if(passwords==""){
+                    document.getElementById("message").innerHTML="**Digitar a Senha!";
+                    return false;
+                }
+                if(passwords.length <8){
+                    document.getElementById("message").innerHTML="**A senha deve ter pelo menos 8 caracteres";
+                    return false;
+                }
+                if(passwords.length >=15){
+                    document.getElementById("message").innerHTML="**A senha deve conter pelo menos 15 caracters";
+                    return false;
+                } else{
+                    alert("Senha Correta");
+                }
+            </script>
+            <button type="button" onclick="matchPassword()">CONFIRMAR</button>
+            <script>
+                function matchPassword(){
+                    alert('Senha Correta function');
                 }
             </script>
         </header>
