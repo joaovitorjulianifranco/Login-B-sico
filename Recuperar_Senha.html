@@ -37,28 +37,84 @@
             <script>
                 var passwords=document.getElementById('password').value;
                 confirmarSuaSenha = function validate_password(confirmarSuaSenha){
-                    if(passwords.length( /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/));
+                    var caracteresEspeciais = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,20}$/;
+                    var letrasMaiusculas = /[A-Z]/;
+                    var letrasMinusculas = /[a-z]/; 
                 }
                 if(passwords==""){
                     document.getElementById("message").innerHTML="**Digitar a Senha!";
+                    return false;
+                }
+                if(passwords==""){
+                    document.getElementById("message").innerHTML="**A senha deve conter letras maiusculas";
+                    return false;
+                }
+                if(passwords==""){
+                    document.getElementById("message").innerHTML="**A senha deve conter letras minusculas";
                     return false;
                 }
                 if(passwords.length <8){
                     document.getElementById("message").innerHTML="**A senha deve ter pelo menos 8 caracteres";
                     return false;
                 }
-                if(passwords.length >=15){
-                    document.getElementById("message").innerHTML="**A senha deve conter pelo menos 15 caracters";
+                if(passwords.length >=20){
+                    document.getElementById("message").innerHTML="**A senha deve conter pelo menos 20 caracters";
                     return false;
                 } else{
                    alert("Senha Alterada Com Sucesso")
+                   return false;
                 }
-                var password = document.getSelection.alerts[0].value;
-                if
+                /*confirmação e virificaço da senha*/
+                function verifyPassword(){
+                var senhaRegex = document.getElementById("confirm_password");
+                }
+                if(passwords==verifyPassword){
+                    alert("Sua senha está errada!");
+                    document.getElementById("console.error(message);").innerHTML="**Sua Senha Deve Conter Letras Maiusculas!";
+                    return(unescape = letrasMaiusculas(/[A-Z]/));
+                }
+                if(passwords==verifyPassword){
+                    alert("Sua Senha Deve Conter Letras Minusculas!");
+                    document.getElementById("console.error(message);").innerHTML="Sua Senha Deve Conter Letras Minusculas!";
+                    return(unescape = letrasMinusculas(/[a-z]/));
+                }
+                if(passwords==verifyPassword <=1){
+                    alert("Sua Senha Deve Conter Pelo Menos 1 Caracter!");
+                    document.getElementById("console.error(message);").innerHTML="Sua Senha Deve Conter Pelo Menos 1caracter!";
+                    return(unescape = caracteresEspeciais(password));
+                }
+                if(caracteresEspeciais == senhaRegex){
+                    alert("Sua senha está errada!")
+                }else{
+                    alert("Sua Senha Deve Conter Pelo Menos 1caracter!");
+                    return true;
+                }while(letrasMaiusculas){
+                    alert("Sua Senha Deve Conter Letras Maiusculas");
+                    return true;
+                }try{
+                    alert("A senha deve conter letras minusculas!");
+                }
+                catch(err){
+                    addalert("Sua Senha Deve Conter Letras Minusculas!");
+                    return true;
+                }
+                function validate_password(){
+                    var password = document.getElementById("password1");
+                    var password2 = document.getElementById("password2");
+                    var password = password.value;
+                    var password2 = password2.value;
+                    if(password == password2){
+                        alert("Senha Alterada com Sucesso!");
+                    }else{
+                        alert("Senha Errada. Verificar os Caracteres Digitado!");
+                        return false;
+                    }
+                }
+               
             </script>
             <button type="button" onclick="matchPassword()">CONFIRMAR</button>
             <!--<script>
-                function validate_password(matchPassword){
+                function verifyPassword(matchPassword){
                     var password = document.getElementById("password-error")
                     if(password==""){
                         alert("Senha Errada!");
