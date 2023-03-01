@@ -20,113 +20,86 @@
                 <div class="form-item">
                     <span class="material-symbols-outlined">password</span>
                     <label for="card-body"></label>
-                    <input type="password" id="Digite a sua Senha" placeholder="Digite Sua Senha"
-                    type="text" id="card-body">
+                    <input type="password" id="Digite a sua Senha" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Deve conter pelo menos um número e uma letra maiúscula e minúscula e pelo menos 8 ou mais caracteres" required> 
                 </div>
                 <div classname="login-card-form">  
                     <legend>Confirmar Sua Senha</legend>
                     <span class="material-symbols-outlined">password</span>
                     <label for="card-body"></label>
-                    <input type="password" id="Digite a sua Senha" placeholder="Confirme Sua Senha"
-                    type="text" id="card-body">
+                    <input type="password" id="Confirma sua Senha" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Deve conter pelo menos um número e uma letra maiúscula e minúscula e pelo menos 8 ou mais caracteres" required> 
                 </div>
-                
+                <div id="message">
+                    <h2>A senha deve conter o seguinte:</h2>
+                    <p id="letter" class="invalid">A Senha Deve Conter<b> minusculas</b>letter</p>
+                    <p id="capital" class="invalid">A Senha Deve Conter Letras<b>(uppercase)</b>letter</p>
+                    <p id="number" class="invalid">A Senha Deve Conter <b>number</b></p>
+                    <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                </div>
             </fieldset>
             </form>
             <!--Validação da senha (Resolvendo)-->
             <script>
-                var passwords=document.getElementById('password').value;
-                confirmarSuaSenha = function validate_password(confirmarSuaSenha){
-                    var caracteresEspeciais = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,20}$/;
-                    var letrasMaiusculas = /[A-Z]/;
-                    var letrasMinusculas = /[a-z]/; 
+            function menssagem(){
+                var myinput = document.getElementById("password");
+                var letter = document.getElementById("letter");
+                var capital = document.getElementById("capital");
+                var number = document.getElementById("number");
+                var length = document.getElementById("length");
+                /*Caixa de Menssagem*/
+                myinput.onfocus = function(){
+                    document.getElementById('message').style.display = "table-row";
                 }
-                if(passwords==""){
-                    document.getElementById("message").innerHTML="**Digitar a Senha!";
-                    return false;
+                /*oculta a caixa de menssagem*/
+                myinput.onblur = function(){
+                    document.getElementById('message').style.display = "none";
                 }
-                if(passwords==""){
-                    document.getElementById("message").innerHTML="**A senha deve conter letras maiusculas";
-                    return false;
+                /*Quando o usuário começa a digitar algo dentro do campo de senha*/
+                myinput.onkeyup = function(){
+                    /*validar letras minusculas*/
+                    var lowerCaseLetters = /[a-z]/g;
+                    letter.classList.remove("invalid");
+                    letter.classList.add("valid");
+                    letter.classList.remove("valid");
+                    letter.classList.add("invalid"); 
                 }
-                if(passwords==""){
-                    document.getElementById("message").innerHTML="**A senha deve conter letras minusculas";
-                    return false;
-                }
-                if(passwords.length <8){
-                    document.getElementById("message").innerHTML="**A senha deve ter pelo menos 8 caracteres";
-                    return false;
-                }
-                if(passwords.length >=20){
-                    document.getElementById("message").innerHTML="**A senha deve conter pelo menos 20 caracters";
-                    return false;
-                } else{
-                   alert("Senha Alterada Com Sucesso")
-                   return false;
-                }
-                /*confirmação e virificaço da senha*/
-                function verifyPassword(){
-                var senhaRegex = document.getElementById("confirm_password");
-                }
-                if(passwords==verifyPassword){
-                    alert("Sua senha está errada!");
-                    document.getElementById("console.error(message);").innerHTML="**Sua Senha Deve Conter Letras Maiusculas!";
-                    return(unescape = letrasMaiusculas(/[A-Z]/));
-                }
-                if(passwords==verifyPassword){
-                    alert("Sua Senha Deve Conter Letras Minusculas!");
-                    document.getElementById("console.error(message);").innerHTML="Sua Senha Deve Conter Letras Minusculas!";
-                    return(unescape = letrasMinusculas(/[a-z]/));
-                }
-                if(passwords==verifyPassword <=1){
-                    alert("Sua Senha Deve Conter Pelo Menos 1 Caracter!");
-                    document.getElementById("console.error(message);").innerHTML="Sua Senha Deve Conter Pelo Menos 1caracter!";
-                    return(unescape = caracteresEspeciais(password));
-                }
-                if(caracteresEspeciais == senhaRegex){
-                    alert("Sua senha está errada!")
+                /*Validar a letra maiuscula*/
+                var lowerCaseLetters = /[A-Z]/g;
+                if(myinput.value.match(uppercaseLetters)){
+                    capital.classList.remove("invalid");
+                    capital.classList.add("vilid");
                 }else{
-                    alert("Sua Senha Deve Conter Pelo Menos 1caracter!");
-                    return true;
-                }while(letrasMaiusculas){
-                    alert("Sua Senha Deve Conter Letras Maiusculas");
-                    return true;
-                }try{
-                    alert("A senha deve conter letras minusculas!");
+                    capital.classList.remove("valid");
+                    capital.classList.add("invalid");
                 }
-                catch(err){
-                    addalert("Sua Senha Deve Conter Letras Minusculas!");
-                    return true;
+                /*Validar numeros*/
+                var validate_numbers = /[0-9]/g;
+                if(myinput.value.length.length >= 8){
+                    validate_numbers.classList.remove("invalid");
+                    validate_numbers.classList.add("valid");
+                }else{
+                    validate_numbers.classList.remove("valid");
+                    validate_numbers.classList.add("invalid");
                 }
-                function validate_password(){
-                    var password = document.getElementById("password1");
-                    var password2 = document.getElementById("password2");
-                    var password = password.value;
-                    var password2 = password2.value;
-                    if(password == password2){
-                        alert("Senha Alterada com Sucesso!");
-                    }else{
-                        alert("Senha Errada. Verificar os Caracteres Digitado!");
-                        return false;
-                    }
+                /*Validart cumprimento*/
+                if(myinput.value.length > 8){
+                    length.classList.remove("invalid");
+                    length.classList.add("valid");
+                } else{
+                    length.classList.remove("valid");
+                    length.classList.add("invalid");
                 }
-               
+            }
+            function verifyPassword(){
+                var myinput = document.getElementById("password");
+                var letter = document.getElementById("letter");
+                var capital = document.getElementById("capital");
+                var number = document.getElementById("number");
+                var length = document.getElementById("length");
+                submit.addEventListener("click", validate_password);
+                function validate_password()
+            }
             </script>
             <button type="button" onclick="matchPassword()">CONFIRMAR</button>
-            <!--<script>
-                function verifyPassword(matchPassword){
-                    var password = document.getElementById("password-error")
-                    if(password==""){
-                        alert("Senha Errada!");
-                        document.getElementById("message").onkeypress="Sua Senha Esta Errado";
-                        return false;
-                    }
-                    if(password==""){
-                        alert("As senhas não conferem");
-                        document.getElementById("message").onkeypress="**";
-                    }
-                }
-            </script>-->
         </header>
     </div> 
 </body>
