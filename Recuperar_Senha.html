@@ -98,6 +98,23 @@
                 submit.addEventListener("click", validate_password);
                 function validate_password()
             }
+            function validate_password(){
+                var passwords = document.forms["pestcontrol"]["password"];
+                var confirmPassword = document.forms["pestcontrol"]["confirmpassword"];
+                var exist = false;
+                if((passwords.value ==""(confirmPassword.value))){
+                    alert("no input");
+                    if(typeof val == 'undefined') val = true;
+                }else if(passwords.value != confirmPassword){
+                    alert('Senha Incorreta!')
+                    if(typeof val == 'undefined') val = true;
+                }else{
+                    alert('Sua Senha Está Correta');
+                    if(typeof val == 'undefined') val = true;
+                }
+                async: false;
+                return existing;
+            }
             </script>
             <button type="button" onclick="matchPassword()">CONFIRMAR</button>
         </header>
