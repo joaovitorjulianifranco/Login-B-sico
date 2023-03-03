@@ -103,7 +103,7 @@
                 var confirmPassword = document.forms["pestcontrol"]["confirmpassword"];
                 var exist = false;
                 if((passwords.value ==""(confirmPassword.value))){
-                    alert("no input");
+                    alert("Senha Nao Inserida!");
                     if(typeof val == 'undefined') val = true;
                 }else if(passwords.value != confirmPassword){
                     alert('Senha Incorreta!')
@@ -112,8 +112,8 @@
                     alert('Sua Senha Está Correta');
                     if(typeof val == 'undefined') val = true;
                 }
-                async: false;
-                return existing;
+                let passwords = document.getElementById("message").innerText.split('undefined', val = true);
+                return exist;
             }
             </script>
             <button type="button" onclick="matchPassword()">CONFIRMAR</button>
