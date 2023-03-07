@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redefinir</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <!--Cabeçalho do Login-->
+    <div>
+        <header class="header">
+            <h1>Encontre Sua Senha?</h1>
+        </header>
+        <header class="login-card-header">
+            <fieldset
+            <div class="login-card-form"></div>
+            <form class="login-card-form">
+                <div class="form-item">
+                    <span class="material-symbols-outlined">password</span>
+                    <label for="card-body"></label>
+                    <input type="password" id="Digite a sua Senha" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Deve conter pelo menos um número e uma letra maiúscula e minúscula e pelo menos 8 ou mais caracteres" required value="alert"> 
+                </div>
+                <div classname="login-card-form">  
+                    <legend>Confirmar Sua Senha</legend>
+                    <span class="material-symbols-outlined">password</span>
+                    <label for="card-body"></label>
+                    <input type="password" id="Confirma sua Senha" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Deve conter pelo menos um número e uma letra maiúscula e minúscula e pelo menos 8 ou mais caracteres" required value="alert"> 
+                    
+                </div>
+                <div id="message">
+                    <h2>A senha deve conter o seguinte:</h2>
+                    <p id="letter" class="invalid">A Senha Deve Conter<b> minusculas</b>letter</p>
+                    <p id="capital" class="invalid">A Senha Deve Conter Letras<b>(uppercase)</b>letter</p>
+                    <p id="number" class="invalid">A Senha Deve Conter <b>number</b></p>
+                    <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                </div>
+            </fieldset>
+            </form>
+            <!--Validação da senha (Resolvendo)-->
+            
+            <button type="button" onclick="matchPassword()" value="button">CONFIRMAR</button>
+            <script src="alertar_Botao.js"></script>
+        </header>
+    </div> 
+</body>
+</html>
