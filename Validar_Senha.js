@@ -34,21 +34,25 @@ function validatePassword(password){
         var args = Array.prototype.slice.call(arguments, "Sua Senha Pode Conter !/\d/");
         return args;
     }
-    /*validaçao*/
-    function generatePassword(length){
-        var uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+    /*validaçao-gera uma senha de comprimento especificado */
+    function validatePassword(newpassword){
+        function generatePassword(length);
+        password.getElementById("newpassword").value = newpassword;
+        password.getElementById("confirmPassword");
+        var uppercaseChars = "/[A-Z]/";
+        var lowercaseChars = "/[a-z]/";
         var numberChars = "0123456789";
         var specialChars = "!@#$%^&*()_+";
-        var allChars = uppercaseChars + lowercaseChars + numberChars + specialChars;
-        var password = "";
-        for (var i = 0; i < length; i++){
-            var randomIndex = Math.floor(Math.random() * allChars.length);
-            password += allChars[randomIndex];
-        }
-        return password;
+        var algoChars = uppercaseChars + lowercaseChars + numberChars + specialChars;
+        var password ="";
     }
-    var password = generatePassword(12);
-    
+    const password = req.query.password || '';
+    confirmpassword = password.replace(uppercaseChars + lowercaseChars + numberChars + specialChars);
+    if(!newpassword || !confirmpassword){
+        return res.sendStatus(400);
+    }for(var i = 0; i < password.length; i++){
+        var newpassword = Math.floor(Math.random() * allChars.length);
+        password += allChars[newpassword];
+    }
+    return confirmpassword;
 }
-
