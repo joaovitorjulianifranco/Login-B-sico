@@ -28,31 +28,64 @@ function validatePassword(password){
         return args.alert("Sua Senha Deve Conter Letras Minusculas [a-z]");
     }
 }if (!/\d/.test(password)){
-    document.getElementById("password-message").innerHTML = "Sua Senha Deve Conter Caracters ";
+    document.getElementById("password-message").innerHTML = "Sua Senha Deve Conter Caracters";
     alert("Sua Senha Pode Conter Caracters");
     function getGrades(){
         var args = Array.prototype.slice.call(arguments, "Sua Senha Pode Conter !/\d/");
         return args;
     }
-    /*validaçao-gera uma senha de comprimento especificado */
-    function validatePassword(newpassword){
-        function generatePassword(length);
-        password.getElementById("newpassword").value = newpassword;
-        password.getElementById("confirmPassword");
-        var uppercaseChars = "/[A-Z]/";
-        var lowercaseChars = "/[a-z]/";
-        var numberChars = "0123456789";
-        var specialChars = "!@#$%^&*()_+";
-        var algoChars = uppercaseChars + lowercaseChars + numberChars + specialChars;
-        var password ="";
+    /*Validar a string de uma letra digitada*/
+    function validateString(str){
+        var uppercaseLetters = prompt(str);
+        if (/[A-Z]/.test(str) && /[a-z]/.test(str)){
+            letters.classList.remove("invalid");
+            letters.classList.add("valid");
+            letter.classList.remove("valid");
+            letter.classList.add("invalid");
+            return undefined;
+        }
+        console.log(validateString(uppercaseChars(str)));
+        console.log(validateString(lowercaseChars(str)));
+        console.log(validateString(numberChars(str)));
     }
-    const password = req.query.password || '';
-    confirmpassword = password.replace(uppercaseChars + lowercaseChars + numberChars + specialChars);
-    if(!newpassword || !confirmpassword){
-        return res.sendStatus(400);
-    }for(var i = 0; i < password.length; i++){
-        var newpassword = Math.floor(Math.random() * allChars.length);
-        password += allChars[newpassword];
+    /*Código de atribuição */
+    var uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+    var numberChars = "0123456789";
+    var specialChars = "!@#$%^&*()_+";
+    var allChars = uppercaseChars + lowercaseChars + numberChars + specialChars;
+    var choices;
+    /*Caixa de Menssagem*/
+    uppercaseChars.onkeyup = function(){
+        document.getElementById("message").style.display = "none";
     }
-    return confirmpassword;
+    const menssagem = new MessageChannel();
+    var menssagem = prompt(uppercaseChars);
+    var menssagem = prompt(lowercaseChars);
+    var menssagem = prompt(numberChars);
+    var menssagem = prompt(specialChars);
+    var allChars = uppercaseChars + lowercaseChars + numberChars + specialChars;
+    if(menssagem != null){
+        alert("Sua Senha Deve Conter Letras Maiusculas" + uppercaseChars + "Sua Senha Deve Conter Letras Minusculas" + lowercaseChars + "Sua Senha Deve Conter Numeros" + numberChars + "Sua Senha Deve Conter Caracters Especiais" + specialChars + "!");
+    }
+    /*Definir menssagem aleatoria*/
+    var messages = [
+        "Sua Senha Deve Conter Letras Maiusculas",
+        "Sua Senha Deve Conter Letras Minusculas",
+        "Sua Senha Deve Conter Numeros",
+        "Sua Senha Deve Conter Caracters Especiais",
+    ];
+    var correctPassword = verifyPassword(password);
+    function checkPassword(input){
+        if(input === verifyPassword){
+            var verifyPassword =! allChars;
+        }
+        function showMessage(){
+            var randomIndex = Math.floor(Math.random() * messages.length);
+            alert("Sua Senha Deve Conter Letras Maiusculas" + uppercaseChars + "Sua Senha Deve Conter Letras Minusculas" + lowercaseChars + "Sua Senha Deve Conter Numeros" + numberChars + "Sua Senha Deve Conter Caracters Especiais" + specialChars + "!");
+        }
+        /*Display da Menssagem*/
+        var passwordInput = prompt(messages[randomIndex] + "Digite Sua Senha");
+        window.prompt(messages["Sua Senha Deve Conter Letras Maiusculas" + uppercaseChars + "Sua Senha Deve Conter Letras Minusculas" + lowercaseChars + "Sua Senha Deve Conter Numeros" + numberChars + "Sua Senha Deve Conter Caracters Especiais" + specialChars + "!"]);
+    }
 }
