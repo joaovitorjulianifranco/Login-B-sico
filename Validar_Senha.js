@@ -85,7 +85,13 @@ function validatePassword(password){
             alert("Sua Senha Deve Conter Letras Maiusculas" + uppercaseChars + "Sua Senha Deve Conter Letras Minusculas" + lowercaseChars + "Sua Senha Deve Conter Numeros" + numberChars + "Sua Senha Deve Conter Caracters Especiais" + specialChars + "!");
         }
         /*Display da Menssagem*/
-        var passwordInput = prompt(messages[randomIndex] + "Digite Sua Senha");
-        window.prompt(messages["Sua Senha Deve Conter Letras Maiusculas" + uppercaseChars + "Sua Senha Deve Conter Letras Minusculas" + lowercaseChars + "Sua Senha Deve Conter Numeros" + numberChars + "Sua Senha Deve Conter Caracters Especiais" + specialChars + "!"]);
-    }
+      var passwordInput = prompt(messages[randomIndex] + "Digite Sua Senha");
+      window.prompt(messages["Sua Senha Deve Conter Letras Maiusculas" + uppercaseChars + "Sua Senha Deve Conter Letras Minusculas" + lowercaseChars + "Sua Senha Deve Conter Numeros" + numberChars + "Sua Senha Deve Conter Caracters Especiais" + specialChars + "!"]);
+      alert(allChars);
+  }if(correctPassword === password){
+      alert("Senha Correta!");
+  }else{
+      alert("Senha Incorreta!");
+  }
+  showMessage();
 }
