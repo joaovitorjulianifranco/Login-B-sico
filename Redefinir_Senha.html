@@ -62,6 +62,15 @@
         text-shadow: none;
         width: 50%;
        }
+       /*Efeito ao Clicar no botao(Ir para cadastro ou recuperar senha)*/
+       #cadastro:target ~ .content #login,
+       #paralogin:target ~ .content #login{
+        z-index: 2;
+        -moz-animation-name: fadeInLeft;
+        animation-name: FadeInLaft;
+        -webkit-animation-delay: .1s;
+        animation-delay: .1s;
+       }
     </style>
 </head>
 <body>
