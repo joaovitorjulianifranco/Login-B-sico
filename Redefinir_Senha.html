@@ -6,42 +6,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redefinir</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        body{
+            font-family: 'poppins', sans-serif;  
+            min-height: 100vh;
+            width: 100vw;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        form{
+            border: 3px solid #f1f1f1;
+            cursor: auto;
+        }
+        #login{
+            display: flexbox;
+            align-items: center;
+            justify-content: baseline;
+            height: 150vh;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        /*Aumentar o Card da Caixa de Texto*/
+       input[type="text"],
+       input[type=password]{
+        width: 100%;
+        padding: 12px 12px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        cursor: text;
+       }
+       h1{
+        display: flex;
+        font-family: Arial;
+        align-items: center;
+        flex-direction: column;
+        font-size: 30pt;
+        color: black;
+        text-shadow: 2px 2px 2px darkred; 
+       }
+       /*Botão*/
+       button{
+        padding: 14px 20px;
+        margin: 8px 0;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid black;
+        cursor: unset;
+        text-shadow: none;
+        width: 50%;
+       }
+    </style>
 </head>
 <body>
     <!--Cabeçalho do Login-->
     <div>
+        <findset>
         <header class="header">
             <h1>Encontre Sua Senha?</h1>
         </header>
         <header class="login-card-header">
-            <fieldset
             <div class="login-card-form"></div>
             <form class="login-card-form">
                 <div class="form-item">
                     <span class="material-symbols-outlined">password</span>
                     <label for="card-body"></label>
-                    <input type="password" id="Digite a sua Senha" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Deve conter pelo menos um número e uma letra maiúscula e minúscula e pelo menos 8 ou mais caracteres" required value="alert"> 
+                    <input type="password" id="Digite a sua Senha" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Deve conter pelo menos um número e uma letra maiúscula e minúscula e pelo menos 8 ou mais caracteres" required> 
                 </div>
                 <div classname="login-card-form">  
                     <legend>Confirmar Sua Senha</legend>
                     <span class="material-symbols-outlined">password</span>
                     <label for="card-body"></label>
-                    <input type="password" id="Confirma sua Senha" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Deve conter pelo menos um número e uma letra maiúscula e minúscula e pelo menos 8 ou mais caracteres" required value="alert"> 
-                    
+                    <input type="password" id="Confirma sua Senha" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Deve conter pelo menos um número e uma letra maiúscula e minúscula e pelo menos 8 ou mais caracteres" required> 
+                <!--<div class="valid-feedback">Senha redefinida com Sucesso</div>
+                <div class="invalid-feedback">Senha Incorreta</div>-->
                 </div>
-                <div id="message">
-                    <h2>A senha deve conter o seguinte:</h2>
-                    <p id="letter" class="invalid">A Senha Deve Conter<b> minusculas</b>letter</p>
-                    <p id="capital" class="invalid">A Senha Deve Conter Letras<b>(uppercase)</b>letter</p>
-                    <p id="number" class="invalid">A Senha Deve Conter <b>number</b></p>
-                    <p id="length" class="invalid">Minimum <b>8 characters</b></p>
-                </div>
+                <div class="col-6 mt-4 mt-xxl-0 w-auto h-auto"></div>
+                <div 
+                class="alert px-4 py-3 mb-0 d-none" 
+                role="alert" 
+                data-mdb-color="warning" 
+                id="password-alert"
+                >
+                <ul class="list-unstyled mb-0">
+                    <li class="requirements leng">
+                    <i class="fas fa-check text-success me-2"></i>
+                    <i class="fas fa-times text-danger me-3"></i>
+                    Sua Senha Deve Conter pelo menos 8 caracters</li>
+                <li class="requirements big-letter">
+                    <i class="fas fa-check text-success me-2"></i>
+                    <i class="fas fa-times text-danger me-3"></i>
+                    Sua Senha Deve Conter Pelo Menos 1 Letra Maiuscula</li>
+                <li class="requirements lowercase">
+                    <i class="fas fa-check text-success me-2"></i>
+                    <i class="fas fa-times text-danger me-3"></i>
+                    Sua Senha Deve Conter Letras Minusculas</li>
+                <li class="requirements num">
+                    <i class="fas fa-check text-success me-2"></i>
+                    <i class="fas fa-times text-danger me-3"></i>
+                    Sua Senha Deve Conter Pelo Menos 1 Numero</li>
+                <li class="requirements special-char">
+                    <i class="fas fa-check text-success me-2"></i>
+                    <i class="fas fa-times text-danger me-3"></i>
+                    Sua Senha Deve Ter Pelo Menos 1 Caractere Especial.</li>
+                </ul>
+            </div>
             </fieldset>
             </form>
             <!--Validação da senha (Resolvendo)-->
-            
+            <script src="Valid_Password.js"></script>
             <button type="button" onclick="matchPassword()" value="button">CONFIRMAR</button>
-            <script src="alertar_Botao.js"></script>
+        </findset>
         </header>
     </div> 
 </body>
