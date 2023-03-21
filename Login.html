@@ -11,29 +11,50 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
     <style>
         body{
-            font-family: 'poppins', sans-serif;  
+            font-family: 'poppins', sans-serif;
             min-height: 100vh;
-            width: 100vw;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+            width: 100vh;
             height: 100vh;
             display: flex;
             flex-direction: row;
             justify-content: center;
-            align-items: center;
-        }
-        form{
-            border: 3px solid #f1f1f1;
-            cursor: auto;
+            margin: 0;
+            padding: 0;
+            margin: 0 auto;
         }
         #login{
             display: flexbox;
             align-items: center;
             justify-content: baseline;
             height: 150vh;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   
         }
-         h1{
+        /*Aumentar a Caixa de Texto*/
+        form{
+            border: 3px solid #f1f1f1;
+            cursor: auto;
+        }
+        input[type="card-body"],
+        input[type="password"]{
+            width: 80%;
+            height: 50%;
+            padding: 12px;
+            display: inline-block;
+            border: 2px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        /*Centralizar o Texto com o checkbox*/
+        label{
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+        }
+        input[type="checkbox"]{
+            vertical-align: middle;
+        }
+        /*Centralizar Cabeçalho*/
+        h1{
             display: flex;
             font-family: Arial;
             align-items: center;
@@ -41,7 +62,20 @@
             font-size: 30pt;
             color: black;
             text-shadow: 2px 2px 2px darkred; 
-       }
+        }
+        h2{
+            display: flex;
+            font-family: Arial;
+            align-items: center;
+            flex-direction: column;
+            font-size: 20pt;
+            color: black;
+            text-shadow: 2px 2px 2px darkred; 
+        }
+        /*Entrar com Rede Social*/
+        .social-media{
+            margin: 10px;
+        }
     </style>
 </head>
 <body>
@@ -54,7 +88,7 @@
             <form class="login-card-form">
                 <div class="form-item">
                     <div class="card-text">
-                        <spam class="form item-icon material-symbols-rounded">Email</spam>
+                        <spam class="form item-icon material-symbols-rounded">mail</spam>
                         <label for="card-body"></label>
                         <Input type="card-body" id="Digite o seu Login" name="Email" placeholder="Digite Seu Email"
                         type="text">
@@ -62,7 +96,7 @@
                     <div class="form-item">
                         <spam class="form-item-icon material-symbols-rounded">password</spam>
                         <label for="card-body"></label>
-                        <input type="password" id="Digite Sua Senha" name="password-alert" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" aria-required="true">
+                        <input type="password" id="Digite Sua Senha" name="password-alert" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Digite a Sua Senha?" aria-required="true">
                     </div>
                 </div>
             </form>
@@ -77,25 +111,25 @@
                 <input id="check" type="checkbox" class="toggle" select-check>
                 <label for="check"><span class="icon">Mantenha-me Conectado</span></label>
             </div>
-        <button type="button" name="button-submite" value="my_button_click_handler" style="color: black; background-color: transparent;" onclick="myfunction">ENTRAR</button>
-        <form class="login-card Enter-with-form">
-            <spam class="login-form-title"><h2>ENTRAR COM</h2></spam>
-            <a href="https://pt-br.facebook.com/">
-                <i class="fa fa-facebook-official">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <button type="button" name="button-submite" value="my_button_click_handler" onclick="myFunction()" style="color: black; background-color: transparent;">ENTRAR</button>
+            <form class="social-media">
+                <spam class="social-media"><h2>ENTRAR COM</h2></spam>
+                <a href="https://pt-br.facebook.com/">
+                    <i class="fa fa-facebook-official">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+                         </svg>
+                    </i>
+                </a>
+                <a href="https://accounts.google.com/v3/signin/identifier?dsh=S125067%3A1669832623682527&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F%26ogbl%2F&emr=1&ltmpl=default&ltmplcache=2&osid=1&passive=true&rm=false&scc=1&service=mail&ss=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin&ifkv=ARgdvAu3w8cV2OTX_XEKfaX6ec8io1OPxSj16cP1Pn2q1fWmIB8eYvKLYkA7s-V3AuEnE6SEGCHcSA" class="btn-google m-b-20">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-google" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+                        <path d="M17.788 5.108a9 9 0 1 0 3.212 6.892h-8"></path>
                      </svg>
-                </i>
-            </a>
-            <a href="https://accounts.google.com/v3/signin/identifier?dsh=S125067%3A1669832623682527&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F%26ogbl%2F&emr=1&ltmpl=default&ltmplcache=2&osid=1&passive=true&rm=false&scc=1&service=mail&ss=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin&ifkv=ARgdvAu3w8cV2OTX_XEKfaX6ec8io1OPxSj16cP1Pn2q1fWmIB8eYvKLYkA7s-V3AuEnE6SEGCHcSA" class="btn-google m-b-20">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-google" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M17.788 5.108a9 9 0 1 0 3.212 6.892h-8"></path>
-                 </svg>
-            </a>
-        </form> 
+                </a>
+            </form>
+        </header>
     </findset>
-    </header>
 </body>
 </html>
