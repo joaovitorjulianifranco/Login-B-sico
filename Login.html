@@ -74,16 +74,22 @@
             text-shadow: 2px 2px 2px darkred; 
         }
         /*Centralizar o layout de cadastramento*/
-        .container{
+        .container-wrapper{
             display: flex;
             flex-direction: column;
             justify-content: center;
             position: absolute;
             top: auto;
             left: 50%;
+            margin-left: 80px;
             transform: translateX(-50%);
         }
-        
+        .container-wrapper .text-right{
+            display: flex;
+            text-align: center;
+            left: 50%;
+            margin-right: 380px;
+        }
         /*Entrar com Rede Social*/
         .social-media .a{
             display: flex;
@@ -128,13 +134,13 @@
                 <input id="check" type="checkbox" class="toggle" select-check>
                 <label for="check"><span class="icon">Mantenha-me Conectado</span></label>
             </div>
-            <button type="button" name="button-submite" value="my_button_click_handler" onclick="myFunction()" style="color: black; background-color: transparent; display: flex; justify-content: center; align-items: center; margin: 0 auto; font-size: 20px; padding: 10px 20px; text-align: center;">ENTRAR</button>
-            <div class="container">
-                <label for="text"><a href="Redefinir_Senha.html">Redefinir Senha?</a></label>
+            <div class="container-wrapper">
+                <label for="text-align"><a href="Redefinir_Senha.html">Redefinir Senha?</a></label>
             </div>
-            <div class="container">
-                <div class="text"><a href="#">Cadastrar</a></div>
+            <div class="container-wrapper">
+                <div class="text-right"><a href="#">Cadastrar</a></div>
             </div>
+            <button type="button" name="submite" value="my_button_click_handler" onclick="myFunction()" style="color: black; background-color: transparent; display: flex; justify-content: center; align-items: center; margin: 0 auto; font-size: 13px; padding: 10px 5px; text-align: center;">ENTRAR</button>
             <form class="social-media">
                 <spam class="social-media"><h2>ENTRAR COM</h2></spam>
                 <a href="https://pt-br.facebook.com/">
