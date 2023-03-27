@@ -73,23 +73,6 @@
             color: black;
             text-shadow: 2px 2px 2px darkred; 
         }
-        /*Centralizar o layout de cadastramento*/
-        .container-wrapper{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position: absolute;
-            top: auto;
-            left: 50%;
-            margin-left: 110px;
-            transform: translateX(-50%);
-        }
-        .container-wrapper .text-right{
-            display: flex;
-            text-align: center;
-            left: 50%;
-            margin-right: 380px;
-        }
         /*Entrar com Rede Social*/
         .social-media .a{
             display: flex;
@@ -134,17 +117,19 @@
                 <input id="check" type="checkbox" class="toggle" select-check>
                 <label for="check"><span class="icon">Mantenha-me Conectado</span></label>
             </div>
-            <!--Em andamento-->
-            <div class="container-wrapper">
-                <a target="text-align" onclick="window.location.href='Redefinir.html'">Redefinir a Senha?</a>
+            <!--Layout de Cadastramento-->
+            <div class="container-wrapper" style="display: flex; flex-direction: column; justify-content: center; position: absolute; top: auto; left: 50%; margin-left: 110px; margin-right: 380px; transform: translateX(-50%);">
+                <a target="text-after" onclick="window.location.href='Redefinir_Senha.html'" style="display: inline; flex-direction: column; justify-content: center; margin-left: 110px; margin-right: 470px; float: left; transform: translateX(-50%);">Redefinir a Senha?</a>
             </div>
-            <div class="container-wrapper">
-                <a target="text-right" onclick="window.location.href='#'">Cadastrar</a>
+            <div class="container-wrapper" style="display: flex; flex-direction: column; justify-content: center; position: absolute; top: auto; left: 50%; margin-left: 110px; margin-right: 380px; transform: translateX(-50%);">
+                <a target="text-before" onclick="window.location.href='#'">Cadastrar</a>
             </div>
-            <button type="button" name="button-submite" value="my_button_click_handler" onclick="myFunction()" style="color: black; background-color: transparent; display: flex; justify-content: center; align-items: center; align-items: center; margin: 0 auto; font-size: 13px; padding: 10px 5px; text-align: center; margin-top: 1cm;">ENTRAR</button>
+            <!--Botão-->
+            <button type="button" name="button-submite" value="my_button_click_handler" onclick="window.location.href='#'" style="color: black; background-color: transparent; display: flex; justify-content: center; align-items: center; align-items: center; margin: 0 auto; font-size: 13px; padding: 10px 5px; text-align: center; margin-top: 1cm;">ENTRAR</button>
+            <!--Opções de Entrada através das redes sociais-->
             <form class="social-media">
                 <spam class="social-media"><h2>ENTRAR COM</h2></spam>
-                <a href="https://pt-br.facebook.com/">
+                <a href="https://pt-br.facebook.com/" class="social-login-button facebook">
                     <i class="fa fa-facebook-official">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
