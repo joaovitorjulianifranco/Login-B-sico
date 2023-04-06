@@ -4,77 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar</title>
+    <title>Cadastrar-se</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <style>
-        body{
-            font-family: 'poppins', sans-serif;
-            min-height: 100vh;
-            width: 100vh;
-            height: 100vh;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            margin: 0;
-            padding: 0;
-            margin: 0 auto;  
-        }
-        #login{
-            display: flexbox;
-            align-items: center;
-            justify-content: baseline;
-            height: 150vh;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   
-        }
-        
-    </style>
 </head>
+<style>
+    body{
+        font-family: 'poppins', sans-serif;
+        min-height: 100vh;
+        width: 100vh;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        margin: 0 auto;  
+    }
+</style>
 <body>
     <findset>
         <header class="header">
-            <h1>Cadastre-se</h1>
+            <h1>Cadastrar-se</h1>
         </header>
         <header class="login-card-header">
-            <div class="name-card-form"></div>
-            <form class="name-card-form">
+            <div class="login-card-form"></div>
+            <form class="login-card-form">
                 <div class="form-item">
-                    <div class="container-wrapper">
+                    <div class="card-text">
                         <span class="material-symbols-outlined">person</span>
                         <label for="card-text" style="display: inline-block;"></label>
                         <input type="card-text" id="Digite o Seu Primeiro nome" name="name" placeholder="Digite o Seu Nome" type="text">
                     </div>
-                    <div class="container-wrapper" style="display: flex; flex-direction: column; align-items: center; justify-content: center; position: absolute; top: auto; margin-left: 80px; transform: translateX(-50%); left: 50%;">
-                        <label for="card-text" style="display: flex; flex-direction: column; align-items: center; width: 300px; height: 100px; justify-content: center; align-items: center; top: auto; position: absolute; margin-left: 80px; transform: translateX(-50%);"></label>
+                    <div class="form-item">
+                        <label for="card-text"></label>
                         <input type="card-text" id="Digite o sobre Nome" placeholder="Digite o Sobre Nome" type="text">
                     </div>
-                    <div class="form-card">
+                    <div class="login-card-form">
                         <div class="placeholder" aria-hidden="true"></div>
                         <input type="text" class="inputtext _58mg _5dba 2ph" data-type="text" name="reg_email_" value aria-required="true" placeholder="Celular ou Email" id="u_l_g_hb">
                     </div>
-                    <div class="form-card">
+                    <div class="psw-card-form">
                         <label for="card-text"></label>
                         <input type="password" id="Digite Sua Senha" name="password-alert" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Digite a Sua Senha?" aria-required="true">
                     </div>
-                    <div class="mtm mbs _2_68">
+                    <div class="data-type">
                         Data de Nascimento
                     <a class="_58ms mlm" id="birthday-help" href="#" title="Clique Para Obter Mais Informações" role="button">
                         <span class="material-symbols-outlined">help</span>
                     </a>
                     </div>
-                    <div class="dateofbirth">
-                        <spam class="dateofbirth" data-type="selectors" date-name="birthday-wrapper" id="u_l_l_8v" aria-describedby="js_ila">
+                    <div class="data-type">
+                        <spam class="data-type" data-type="selectors" date-name="birthday-wrapper" id="u_l_l_8v" aria-describedby="js_ila">
                             <input type="date" id="bday" name="date" required-pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
                         </spam>
                     </div>
-                    <!--Genero-->
-                    <div class="mtm mbs _2_68">
+                    <!--Gênero-->
+                    <div class="gender_container">
                         Gênero
-                        <a class="_58ms mlm" id="birthday-help" href="#" title="Clique Para Obter Mais Informações" role="button">
-                            <span class="material-symbols-outlined">help</span>
-                        </a>
+                    <a class="custom_gender_Container" id="birthday-help" href="#" title="Clique Para Obter Mais Informações" role="button">
+                        <spam class="material-symbols-outlined">help</spam>
+                    </a>
                     </div>
-                    <div class="campo">
+                    <div class="campo-card-form">
                         <label>
                             <input type="radio" name="sex" value="1" select="select-check">Feminino
                         </label>
@@ -82,26 +74,37 @@
                             <input type="radio" name="sex" value="2" select="select-check">Masculino
                         </label>
                         <label>
-                            <input type="radio" name="sex" value="-1" select="select-check">Personalizado
+                            <input type="radio" name="sex" value="-1" select="select-check" onclick="show_hide()">Personalizado
                         </label>
                     </div>
-                    <div class="mtm_8ffv" id="custom_gender_Container">
-                        <div class="_17ie_5dbb" data-type="selectors" data-name="preferred-pronoun" id="u_2_p_us">
-                            <select aria-label="selecione o pronome" name="preferred-pronoun" class="_7-16 _9hk6 _5dba">
+                    <div class="campo-card-form" id="custom_gender_Container">
+                        <div class="campo-card-form" data-type="selectors" data-name="preferred-pronoun" id="u_2_p_us">
+                            <select aria-label="selecione o pronome" name="preferred-pronoun" class="campo-card-form" >
                                 <option selected="1" value disabled="1">Selecione o Pronome</option>
                                 <option value="1">Feminino: "Deseje a ela um feliz aniversário!"</option>
                                 <option value="2">Masculino: "Deseje a ele um feliz aniversário!"</option>
                                 <option value="6">Neutro: "Deseje a ele(a) um feliz aniversário!"</option>
-                            </select>
+                            </select><br>
                         </div>
-                        <div class="_83kf">Seu pronome fica visível para todos.</div>
-                        <div class="_7-1q">
+                        <!--O script é responsavel por deixar o button type radio visível e invisivel-->
+                        <script>
+                           function show_hide(){
+                            var Mostrar = document.getElementById("custom_gender_Container");
+                            if (Mostrar.style.display == "none"){
+                                Mostrar.style.display = "block";
+                            }else{
+                                Mostrar.style.display = "none";
+                            }
+                           }
+                        </script>
+                        <!--Select do card visível e invisivel-->
+                        <div class="campo-card-form">Seu Pronome fica visível e invisivel para todos.</div>
+                        <div class="campo">
                             <div class="uiStickyPlaceholderInput uiStickyPlaceholderInput" id="uiStickyPlaceholderEmptyInput">
                                 <div class="placeholder" aria-hidden="true">Gênero (opcional)</div>
                                 <input type="text" class="inputtext" data-type="text" name="custom_gender" placeholder aria-label="Gênero (opcional)" id="u_2_q_pp">
                             </div>
                         </div>
-                    </div>
                     </div>
                 </div>
             </form>
