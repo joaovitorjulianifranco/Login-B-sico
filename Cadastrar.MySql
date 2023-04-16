@@ -1,0 +1,22 @@
+create database Cadastrar;
+
+create table Cadastrar (
+Id int auto_increment,
+Nome varchar(20) not null,
+Sobre_Nome varchar(20) not null,
+Email varchar(20), DDD int(2), Telefone bigint(9),
+Data_Nasc date,
+Genero enum('M','F'), 
+check(Data_Nasc >=18),
+primary key(Id, DDD));
+
+select * from cadastrar;
+
+insert into cadastrar (Id, Nome, Sobre_Nome, Email, Data_nasc, Genero) values ('1', 'Joao Vitor', 'Franco', 'joaovitor23@hotmail.com', '2000-02-05', 'M');
+insert into cadastrar (Id, Nome, Sobre_Nome, Email, Data_nasc, Genero) values ('2', 'Guimaraes', 'Fabio', '', '', '');
+insert into cadastrar (Id, Nome, Sobre_Nome, Email, Data_nasc, Genero) values ('3', 'Clareosvalda', 'Santos', '', '', '');
+insert into cadastrar (Id, Nome, Sobre_Nome, Email, Data_nasc, Genero) values ('4', 'Jean', 'Pereira', '', '', '');
+insert into cadastrar (Id, Nome, Sobre_Nome, Email, Data_nasc, Genero) values ('5', 'Mafalda', '', '', '', '');
+insert into cadastrar (Id, Nome, Sobre_Nome, Email, Data_nasc, Genero) values ('6', 'Clara', 'Pereira', '', '', '');
+
+alter table cadastrar add column Idade int after Data_Nasc;
