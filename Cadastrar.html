@@ -21,6 +21,16 @@
         padding: 0;
         margin: 0 auto;  
     }
+    h1{
+        display: flex;
+        font-family: Arial;
+        align-items: center;
+        flex-direction: column;
+        font-size: 30pt;
+        color: black;
+        text-shadow: 2px 2px 2px darkred; 
+    }
+
 </style>
 <body>
     <findset>
@@ -36,13 +46,17 @@
                         <label for="card-text" style="display: inline-block;"></label>
                         <input type="card-text" id="Digite o Seu Primeiro nome" name="name" placeholder="Digite o Seu Nome" type="text">
                     </div>
-                    <div class="form-item">
+                    <form class="new-login" id="new-login" action="/Login.html" accept-charset="UTF-8" method="get" data-gtm-form-interact-id="/">
+                        <div class="row">
+                    <div class="login-card-form">
                         <label for="card-text"></label>
                         <input type="card-text" id="Digite o sobre Nome" placeholder="Digite o Sobre Nome" type="text">
                     </div>
+                    <div class="row"></div>
                     <div class="login-card-form">
                         <div class="placeholder" aria-hidden="true"></div>
                         <input type="text" class="inputtext _58mg _5dba 2ph" data-type="text" name="reg_email_" value aria-required="true" placeholder="Celular ou Email" id="u_l_g_hb">
+                    </div>
                     </div>
                     <div class="psw-card-form">
                         <label for="card-text"></label>
@@ -78,8 +92,8 @@
                         </label>
                     </div>
                     <div class="campo-card-form" id="custom_gender_Container">
-                        <div class="campo-card-form" data-type="selectors" data-name="preferred-pronoun" id="u_2_p_us">
-                            <select aria-label="selecione o pronome" name="preferred-pronoun" class="campo-card-form" >
+                        <div class="campo-card-form" data-type="selected" data-name="preferred-pronoun" id="u_2_p_us">
+                            <select aria-label="selecione o pronome" name="opcoes" class="campo-card-form" >
                                 <option selected="1" value disabled="1">Selecione o Pronome</option>
                                 <option value="1">Feminino: "Deseje a ela um feliz aniversário!"</option>
                                 <option value="2">Masculino: "Deseje a ele um feliz aniversário!"</option>
@@ -89,11 +103,11 @@
                         <!--O script é responsavel por deixar o button type radio visível e invisivel-->
                         <script>
                            function show_hide(){
-                            var Mostrar = document.getElementById("custom_gender_Container");
-                            if (Mostrar.style.display == "none"){
-                                Mostrar.style.display = "block";
+                            var Personalizado = document.getElementById("custom_gender_Container");
+                            if (Personalizado.style.display == "none"){
+                                Personalizado.style.display = "block";
                             }else{
-                                Mostrar.style.display = "none";
+                                Personalizado.style.display = "none";
                             }
                            }
                         </script>
@@ -106,6 +120,7 @@
                             </div>
                         </div>
                     </div>
+                </form>
                 </div>
             </form>
         </header>
