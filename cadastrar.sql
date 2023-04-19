@@ -1,21 +1,23 @@
 create database Cadastrar;
 
-create table Cadst(
+create table Cadastrar(
 Id tinyint,
-Nome varchar(22) not null,
-Sobre_Nome varchar(22) not null,
-Email varchar(20),
-DDD int not null,
-Telefone bigint not null,
+Nome nvarchar(22) not null,
+Sobre_Nome nvarchar(22) not null,
+Email nvarchar(20),
 Pwd varchar(100) not null, 
 Data_Nasc date,
-Idade int,
-Genero char(1),
+Idade smallint,
+Genero char(2),
 check(Idade >= 18 and Pwd >= 100),
-primary key(Id, DDD, Telefone, Idade));
+primary key(Id, Idade));
 
-select * from Cadst;
+select * from Cadastrar;
+
+use [Cadastrar]
+go
 
 
 
-drop table Cadst;
+drop table Cadastrar;
+drop database Cadastrar;
